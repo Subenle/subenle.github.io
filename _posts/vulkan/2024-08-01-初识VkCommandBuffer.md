@@ -13,7 +13,7 @@ Command buffers 是用来记录命令的对象，其随后被提交到队列里�
 除非额外声明，在无显式同步的情况下，通过命令缓冲提交的命令可能以随机的顺序执行，或者说是并行执行。在无显式内存依赖的情况下，这些命令对内存的影响也可能不会直接对其他命令可见。对于同一个命令缓冲里的命令或者跨多个提交到队列的命令缓冲都适用。对于隐式和显式的同步，需查看「同步」章节的内容。
 
 ## 命令缓冲的生命周期
-![VkCommandBufferLifecycle](vulkan/VkCommandBufferLifecycle.png)
+![VkCommandBufferLifecycle](VkCommandBufferLifecycle.png)
 - Initial：命令缓冲创建后即在此状态。之后也可从Recording、Executable、Invalid状态reset到此状态
 - Recording：vkBeginCommandBuffer将状态转为Recording，此状态下vkCmd*命令可用来记录命令。
 - Executable：vkEndCommandBuffer将状态转为Executable。此状态下可提交、重置或记录进另一个命令缓冲。
