@@ -1,3 +1,19 @@
+---
+layout: post
+#标题配置
+title:  初识VkCommandBuffer
+#时间配置
+date:   2024-08-01
+#大类配置
+categories: vulkan
+#小类配置
+tag: VkCommandBuffer
+---
+
+* content
+{:toc} 
+
+
 Command buffers 是用来记录命令的对象，其随后被提交到队列里执行。分为基础命令缓冲和二级命令缓冲，其中基础命令缓冲可执行二级命令缓冲，也可以提交到队列。而二级命令缓冲不能直接提交到队列。
 
 记录的命令包含了如下主要命令：
